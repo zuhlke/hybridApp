@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <title>Hybrid App</title>
+</head>
+
+<body data-ng-app="hybridApp">
+<h1>Hybrid App</h1>
+<ul>
+    <li><a href="#/balance">Balance</a></li>
+    <li><a href="#/currencyConverter">Currency Converter</a></li>
+</ul>
+
+<div data-ng-view></div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+
+<script src="app/app.module.js"></script>
+
+<script src="app/balance/balance.config.js"></script>
+<script src="app/balance/balance.controller.js"></script>
+
+<script src="app/currencyConverter/currencyConverter.config.js"></script>
+<script src="app/currencyConverter/currencyConverter.controller.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "spa",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "Philippe Morier <thorgal.hayne@outlook.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/gartmann/hybridApp",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.0",
+    "angular": "^1.5.0"
+  }
+}
