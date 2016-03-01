@@ -8,7 +8,7 @@
 <body data-ng-app="hybridApp">
 <h1>Hybrid App</h1>
 <ul>
-    <li><a href="#/balance">Balance</a></li>
+    <li><a href="#/fastBalance">Balance</a></li>
     <li><a href="#/currencyConverter">Currency Converter</a></li>
 </ul>
 
@@ -16,14 +16,17 @@
 
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
-
+<script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="app/app.module.js"></script>
 
-<script src="app/balance/balance.config.js"></script>
-<script src="app/balance/balance.controller.js"></script>
+<script src="app/fastBalance/fastBalance.config.js"></script>
+<script src="app/fastBalance/fastBalance.controller.js"></script>
 
 <script src="app/currencyConverter/currencyConverter.config.js"></script>
 <script src="app/currencyConverter/currencyConverter.controller.js"></script>
+
+<script src="app/balance/balance.resource.js"></script>
+<script src="app/balance/balanceRepository.factory.mock.js"></script>
 
 </body>
 </html>

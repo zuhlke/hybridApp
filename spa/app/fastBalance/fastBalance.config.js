@@ -8,10 +8,10 @@
     config.$inject = ['$routeProvider'];
     function config($routeProvider) {
         $routeProvider
-            .when('/balance', {
-                templateUrl: 'app/balance/balance.template.html',
-                controller: 'BalanceController',
-                controllerAs: 'balanceViewModel'
+            .when('/fastBalance', {
+                templateUrl: 'app/fastBalance/fastBalance.template.html',
+                controller: 'FastBalanceController',
+                controllerAs: 'fastBalanceViewModel'
             })
             .otherwise({
                 redirectTo: '/'
