@@ -20,7 +20,7 @@
 		C32033FD1C86E6E700AD479B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32033FC1C86E6E700AD479B /* CoreLocation.framework */; };
 		C32033FF1C86E6F000AD479B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32033FE1C86E6F000AD479B /* CoreGraphics.framework */; };
 		C32034011C86E6FB00AD479B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32034001C86E6FB00AD479B /* MobileCoreServices.framework */; };
-		C32034071C86EB9D00AD479B /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C32033F91C86E6AC00AD479B /* libCordova.a */; };
+		C320340C1C87052500AD479B /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C32033F91C86E6AC00AD479B /* libCordova.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C32034071C86EB9D00AD479B /* libCordova.a in Frameworks */,
+				C320340C1C87052500AD479B /* libCordova.a in Frameworks */,
 				C32034011C86E6FB00AD479B /* MobileCoreServices.framework in Frameworks */,
 				C32033FF1C86E6F000AD479B /* CoreGraphics.framework in Frameworks */,
 				C32033FD1C86E6E700AD479B /* CoreLocation.framework in Frameworks */,
@@ -476,7 +476,7 @@
 				);
 				INFOPLIST_FILE = iOSApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-Obj-C";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zuehlke.iOSApp.iOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSApp/iOSApp-Bridging-Header.h";
@@ -495,7 +495,7 @@
 				);
 				INFOPLIST_FILE = iOSApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-Obj-C";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zuehlke.iOSApp.iOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSApp/iOSApp-Bridging-Header.h";
