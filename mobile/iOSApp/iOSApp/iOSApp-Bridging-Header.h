@@ -1,0 +1,1 @@
+#import "../CordovaLib/Classes/Public/CDVViewController.h"
