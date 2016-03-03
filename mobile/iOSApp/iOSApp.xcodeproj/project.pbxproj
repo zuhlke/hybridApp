@@ -23,7 +23,7 @@
 		C362E19B1C874B5700833F20 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362E19A1C874B5700833F20 /* AVFoundation.framework */; };
 		C362E19E1C874B5F00833F20 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362E19D1C874B5F00833F20 /* CoreMedia.framework */; };
 		C362E1A01C874B6600833F20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362E19F1C874B6600833F20 /* Foundation.framework */; };
-		C362E1A71C8751A300833F20 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C32033F91C86E6AC00AD479B /* libCordova.a */; };
+		C39EF1B71C882F7E0024BF07 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C39EF1B61C882F600024BF07 /* libCordova.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +41,9 @@
 			remoteGlobalIDString = C32033BE1C86E58B00AD479B;
 			remoteInfo = iOSApp;
 		};
-		C32033F81C86E6AC00AD479B /* PBXContainerItemProxy */ = {
+		C39EF1B51C882F600024BF07 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C32033F41C86E6AC00AD479B /* CordovaLib.xcodeproj */;
+			containerPortal = C39EF1B11C882F600024BF07 /* CordovaLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 68A32D7114102E1C006B237C;
 			remoteInfo = CordovaLib;
@@ -66,7 +66,6 @@
 		C32033E41C86E58B00AD479B /* iOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAppUITests.swift; sourceTree = "<group>"; };
 		C32033E61C86E58B00AD479B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C32033F21C86E62200AD479B /* config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = config.xml; sourceTree = "<group>"; };
-		C32033F41C86E6AC00AD479B /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		C32033FA1C86E6DE00AD479B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		C32033FC1C86E6E700AD479B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C32033FE1C86E6F000AD479B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -75,6 +74,7 @@
 		C362E19A1C874B5700833F20 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C362E19D1C874B5F00833F20 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		C362E19F1C874B6600833F20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C39EF1B11C882F600024BF07 /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C362E1A71C8751A300833F20 /* libCordova.a in Frameworks */,
+				C39EF1B71C882F7E0024BF07 /* libCordova.a in Frameworks */,
 				C362E1A01C874B6600833F20 /* Foundation.framework in Frameworks */,
 				C362E19E1C874B5F00833F20 /* CoreMedia.framework in Frameworks */,
 				C362E19B1C874B5700833F20 /* AVFoundation.framework in Frameworks */,
@@ -119,7 +119,7 @@
 				C32033E31C86E58B00AD479B /* iOSAppUITests */,
 				C32033C01C86E58B00AD479B /* Products */,
 				C32033F21C86E62200AD479B /* config.xml */,
-				C32033F41C86E6AC00AD479B /* CordovaLib.xcodeproj */,
+				C39EF1B11C882F600024BF07 /* CordovaLib.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,14 +166,6 @@
 			path = iOSAppUITests;
 			sourceTree = "<group>";
 		};
-		C32033F51C86E6AC00AD479B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C32033F91C86E6AC00AD479B /* libCordova.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		C32034021C86E75300AD479B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +178,14 @@
 				C32033FA1C86E6DE00AD479B /* AssetsLibrary.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C39EF1B21C882F600024BF07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C39EF1B61C882F600024BF07 /* libCordova.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,8 +280,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = C32033F51C86E6AC00AD479B /* Products */;
-					ProjectRef = C32033F41C86E6AC00AD479B /* CordovaLib.xcodeproj */;
+					ProductGroup = C39EF1B21C882F600024BF07 /* Products */;
+					ProjectRef = C39EF1B11C882F600024BF07 /* CordovaLib.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -294,11 +294,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		C32033F91C86E6AC00AD479B /* libCordova.a */ = {
+		C39EF1B61C882F600024BF07 /* libCordova.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libCordova.a;
-			remoteRef = C32033F81C86E6AC00AD479B /* PBXContainerItemProxy */;
+			remoteRef = C39EF1B51C882F600024BF07 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
