@@ -24,6 +24,7 @@
 		C362E19E1C874B5F00833F20 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362E19D1C874B5F00833F20 /* CoreMedia.framework */; };
 		C362E1A01C874B6600833F20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362E19F1C874B6600833F20 /* Foundation.framework */; };
 		C39EF1B71C882F7E0024BF07 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C39EF1B61C882F600024BF07 /* libCordova.a */; };
+		C3EB47061C889E3D00FFDFE4 /* www in Resources */ = {isa = PBXBuildFile; fileRef = C3EB47051C889E3D00FFDFE4 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		C362E19D1C874B5F00833F20 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		C362E19F1C874B6600833F20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C39EF1B11C882F600024BF07 /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
+		C3EB47051C889E3D00FFDFE4 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = CordovaLib/../www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		C32033B61C86E58B00AD479B = {
 			isa = PBXGroup;
 			children = (
+				C3EB47051C889E3D00FFDFE4 /* www */,
 				C32034021C86E75300AD479B /* Frameworks */,
 				C32033C11C86E58B00AD479B /* iOSApp */,
 				C32033D81C86E58B00AD479B /* iOSAppTests */,
@@ -311,6 +314,7 @@
 				C32033CF1C86E58B00AD479B /* LaunchScreen.storyboard in Resources */,
 				C32033CC1C86E58B00AD479B /* Assets.xcassets in Resources */,
 				C32033CA1C86E58B00AD479B /* Main.storyboard in Resources */,
+				C3EB47061C889E3D00FFDFE4 /* www in Resources */,
 				C32033F31C86E62200AD479B /* config.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
