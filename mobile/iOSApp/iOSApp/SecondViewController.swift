@@ -26,7 +26,8 @@ class SecondViewController: CDVViewController {
             self.view.bounds.origin.x,
             self.view.bounds.origin.y+40,
             self.view.bounds.width,
-            self.view.bounds.height-40)
+            self.view.bounds.height-120)
+        self.view.backgroundColor = UIColor.blueColor()
     }
 
 
