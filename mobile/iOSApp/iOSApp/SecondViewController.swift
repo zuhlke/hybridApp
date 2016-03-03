@@ -8,21 +8,25 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: CDVViewController {
 
     override func viewDidLoad() {
        super.viewDidLoad()
-
-        let viewController = CDVViewController()
-        viewController.view.frame = CGRectMake(0, 40, 320, 450);
-        self.view.addSubview(viewController.view)
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true);
+        self.webView!.frame = CGRectMake(
+            self.view.bounds.origin.x,
+            self.view.bounds.origin.y+40,
+            self.view.bounds.width,
+            self.view.bounds.height-40)
     }
 
 

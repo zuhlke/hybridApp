@@ -20,7 +20,10 @@
 		C32033FD1C86E6E700AD479B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32033FC1C86E6E700AD479B /* CoreLocation.framework */; };
 		C32033FF1C86E6F000AD479B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32033FE1C86E6F000AD479B /* CoreGraphics.framework */; };
 		C32034011C86E6FB00AD479B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32034001C86E6FB00AD479B /* MobileCoreServices.framework */; };
-		C320340C1C87052500AD479B /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C32033F91C86E6AC00AD479B /* libCordova.a */; };
+		C362E19B1C874B5700833F20 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362E19A1C874B5700833F20 /* AVFoundation.framework */; };
+		C362E19E1C874B5F00833F20 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362E19D1C874B5F00833F20 /* CoreMedia.framework */; };
+		C362E1A01C874B6600833F20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362E19F1C874B6600833F20 /* Foundation.framework */; };
+		C362E1A71C8751A300833F20 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C32033F91C86E6AC00AD479B /* libCordova.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		C32033FE1C86E6F000AD479B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C32034001C86E6FB00AD479B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C32034051C86E8CF00AD479B /* iOSApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOSApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		C362E19A1C874B5700833F20 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C362E19D1C874B5F00833F20 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		C362E19F1C874B6600833F20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +82,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C320340C1C87052500AD479B /* libCordova.a in Frameworks */,
+				C362E1A71C8751A300833F20 /* libCordova.a in Frameworks */,
+				C362E1A01C874B6600833F20 /* Foundation.framework in Frameworks */,
+				C362E19E1C874B5F00833F20 /* CoreMedia.framework in Frameworks */,
+				C362E19B1C874B5700833F20 /* AVFoundation.framework in Frameworks */,
 				C32034011C86E6FB00AD479B /* MobileCoreServices.framework in Frameworks */,
 				C32033FF1C86E6F000AD479B /* CoreGraphics.framework in Frameworks */,
 				C32033FD1C86E6E700AD479B /* CoreLocation.framework in Frameworks */,
@@ -168,6 +177,9 @@
 		C32034021C86E75300AD479B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C362E19F1C874B6600833F20 /* Foundation.framework */,
+				C362E19D1C874B5F00833F20 /* CoreMedia.framework */,
+				C362E19A1C874B5700833F20 /* AVFoundation.framework */,
 				C32034001C86E6FB00AD479B /* MobileCoreServices.framework */,
 				C32033FE1C86E6F000AD479B /* CoreGraphics.framework */,
 				C32033FC1C86E6E700AD479B /* CoreLocation.framework */,

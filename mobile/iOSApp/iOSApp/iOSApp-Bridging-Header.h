@@ -1,1 +1,1 @@
-#import "../CordovaLib/Classes/Public/CDVViewController.h"
+#import "../CordovaLib/Classes/CDVViewController.h"
