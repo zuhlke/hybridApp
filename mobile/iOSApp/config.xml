@@ -20,6 +20,10 @@
         <param name="ios-package" value="CDVHandleOpenURL" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="SecretGeneratorPlugin">
+        <param name="ios-package" value="HWPSecretGeneratorPlugin" />
+        <param name="onload" value="true" />
+    </feature>
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <name>iOSApp</name>

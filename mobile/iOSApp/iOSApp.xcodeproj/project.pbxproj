@@ -25,6 +25,7 @@
 		C362E1A01C874B6600833F20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362E19F1C874B6600833F20 /* Foundation.framework */; };
 		C3EB47061C889E3D00FFDFE4 /* www in Resources */ = {isa = PBXBuildFile; fileRef = C3EB47051C889E3D00FFDFE4 /* www */; };
 		C3EB470E1C88A36700FFDFE4 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EB470D1C88A27100FFDFE4 /* libCordova.a */; };
+		D87F1AD31C898E89006DE6ED /* CDVSecretGeneratorPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F1AD21C898E89006DE6ED /* CDVSecretGeneratorPlugin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		C362E19F1C874B6600833F20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3EB47051C889E3D00FFDFE4 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = CordovaLib/../www; sourceTree = "<group>"; };
 		C3EB47081C88A27100FFDFE4 /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
+		D87F1AD21C898E89006DE6ED /* CDVSecretGeneratorPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDVSecretGeneratorPlugin.swift; path = iOSApp/Plugins/SecretGeneratorPlugin/CDVSecretGeneratorPlugin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		C32033B61C86E58B00AD479B = {
 			isa = PBXGroup;
 			children = (
+				D87F1AD41C898E8F006DE6ED /* Plugins */,
 				C3EB47051C889E3D00FFDFE4 /* www */,
 				C32034021C86E75300AD479B /* Frameworks */,
 				C32033C11C86E58B00AD479B /* iOSApp */,
@@ -196,6 +199,14 @@
 				C3EB470D1C88A27100FFDFE4 /* libCordova.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D87F1AD41C898E8F006DE6ED /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				D87F1AD21C898E89006DE6ED /* CDVSecretGeneratorPlugin.swift */,
+			);
+			name = Plugins;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +361,7 @@
 			files = (
 				C32033C71C86E58B00AD479B /* SecondViewController.swift in Sources */,
 				C32033C31C86E58B00AD479B /* AppDelegate.swift in Sources */,
+				D87F1AD31C898E89006DE6ED /* CDVSecretGeneratorPlugin.swift in Sources */,
 				C32033C51C86E58B00AD479B /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
