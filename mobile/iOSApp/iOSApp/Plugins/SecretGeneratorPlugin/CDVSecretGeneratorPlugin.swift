@@ -14,6 +14,8 @@ import UIKit
         NSLog("========== generateSecret()!")
         NSLog("========== command.arguments: \(command.arguments)")
         NSLog("========== command.argumentAtIndex(0): \(command.argumentAtIndex(0))")
+        NSLog("========== command.callbackId: \(command.callbackId)")
+        
         let message = command.arguments[0]
         let pluginResult = CDVPluginResult(status: CDVCommandStatus_OK, messageAsString: "Hello \(message)")
         
