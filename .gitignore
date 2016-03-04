@@ -2,3 +2,5 @@ node_modules
 bower_components
 *.log
 .idea
+mobile/iOSApp/iOSApp.xcodeproj
+mobile/iOSApp/CordovaLib/CordovaLib.xcodeproj
