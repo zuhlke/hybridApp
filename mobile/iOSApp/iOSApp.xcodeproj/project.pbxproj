@@ -16,13 +16,6 @@
 		C32033DA1C86E58B00AD479B /* iOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32033D91C86E58B00AD479B /* iOSAppTests.swift */; };
 		C32033E51C86E58B00AD479B /* iOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32033E41C86E58B00AD479B /* iOSAppUITests.swift */; };
 		C32033F31C86E62200AD479B /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = C32033F21C86E62200AD479B /* config.xml */; };
-		C32033FB1C86E6DE00AD479B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32033FA1C86E6DE00AD479B /* AssetsLibrary.framework */; };
-		C32033FD1C86E6E700AD479B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32033FC1C86E6E700AD479B /* CoreLocation.framework */; };
-		C32033FF1C86E6F000AD479B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32033FE1C86E6F000AD479B /* CoreGraphics.framework */; };
-		C32034011C86E6FB00AD479B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32034001C86E6FB00AD479B /* MobileCoreServices.framework */; };
-		C362E19B1C874B5700833F20 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362E19A1C874B5700833F20 /* AVFoundation.framework */; };
-		C362E19E1C874B5F00833F20 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362E19D1C874B5F00833F20 /* CoreMedia.framework */; };
-		C362E1A01C874B6600833F20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362E19F1C874B6600833F20 /* Foundation.framework */; };
 		C3EB47061C889E3D00FFDFE4 /* www in Resources */ = {isa = PBXBuildFile; fileRef = C3EB47051C889E3D00FFDFE4 /* www */; };
 		C3EB470E1C88A36700FFDFE4 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EB470D1C88A27100FFDFE4 /* libCordova.a */; };
 		D87F1AD31C898E89006DE6ED /* CDVSecretGeneratorPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F1AD21C898E89006DE6ED /* CDVSecretGeneratorPlugin.swift */; };
@@ -75,14 +68,7 @@
 		C32033E41C86E58B00AD479B /* iOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAppUITests.swift; sourceTree = "<group>"; };
 		C32033E61C86E58B00AD479B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C32033F21C86E62200AD479B /* config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = config.xml; sourceTree = "<group>"; };
-		C32033FA1C86E6DE00AD479B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		C32033FC1C86E6E700AD479B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		C32033FE1C86E6F000AD479B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C32034001C86E6FB00AD479B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C32034051C86E8CF00AD479B /* iOSApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOSApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		C362E19A1C874B5700833F20 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		C362E19D1C874B5F00833F20 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		C362E19F1C874B6600833F20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3EB47051C889E3D00FFDFE4 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = CordovaLib/../www; sourceTree = "<group>"; };
 		C3EB47081C88A27100FFDFE4 /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		D87F1AD21C898E89006DE6ED /* CDVSecretGeneratorPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDVSecretGeneratorPlugin.swift; path = iOSApp/Plugins/SecretGeneratorPlugin/CDVSecretGeneratorPlugin.swift; sourceTree = "<group>"; };
@@ -94,13 +80,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3EB470E1C88A36700FFDFE4 /* libCordova.a in Frameworks */,
-				C362E1A01C874B6600833F20 /* Foundation.framework in Frameworks */,
-				C362E19E1C874B5F00833F20 /* CoreMedia.framework in Frameworks */,
-				C362E19B1C874B5700833F20 /* AVFoundation.framework in Frameworks */,
-				C32034011C86E6FB00AD479B /* MobileCoreServices.framework in Frameworks */,
-				C32033FF1C86E6F000AD479B /* CoreGraphics.framework in Frameworks */,
-				C32033FD1C86E6E700AD479B /* CoreLocation.framework in Frameworks */,
-				C32033FB1C86E6DE00AD479B /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +105,6 @@
 			children = (
 				D87F1AD41C898E8F006DE6ED /* Plugins */,
 				C3EB47051C889E3D00FFDFE4 /* www */,
-				C32034021C86E75300AD479B /* Frameworks */,
 				C32033C11C86E58B00AD479B /* iOSApp */,
 				C32033D81C86E58B00AD479B /* iOSAppTests */,
 				C32033E31C86E58B00AD479B /* iOSAppUITests */,
@@ -177,20 +155,6 @@
 				C32033E61C86E58B00AD479B /* Info.plist */,
 			);
 			path = iOSAppUITests;
-			sourceTree = "<group>";
-		};
-		C32034021C86E75300AD479B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C362E19F1C874B6600833F20 /* Foundation.framework */,
-				C362E19D1C874B5F00833F20 /* CoreMedia.framework */,
-				C362E19A1C874B5700833F20 /* AVFoundation.framework */,
-				C32034001C86E6FB00AD479B /* MobileCoreServices.framework */,
-				C32033FE1C86E6F000AD479B /* CoreGraphics.framework */,
-				C32033FC1C86E6E700AD479B /* CoreLocation.framework */,
-				C32033FA1C86E6DE00AD479B /* AssetsLibrary.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C3EB47091C88A27100FFDFE4 /* Products */ = {
