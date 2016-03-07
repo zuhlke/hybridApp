@@ -4,8 +4,9 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <title>Hybrid App</title>
 </head>
-
+<!-- htmlbuild:angularStartUp -->
 <body data-ng-app="hybridApp">
+<!-- endbuild -->
 <h1>Hybrid App</h1>
 <ul>
     <li><a href="#/fastBalance">Balance</a></li>
@@ -14,9 +15,16 @@
 
 <div data-ng-view></div>
 
+<!-- htmlbuild:cordova -->
+<!-- endbuild -->
+
+<!-- htmlbuild:bower -->
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
+<!-- endbuild -->
+
+<!-- htmlbuild:hybridApp -->
 <script src="app/app.module.js"></script>
 
 <script src="app/fastBalance/fastBalance.config.js"></script>
@@ -27,6 +35,10 @@
 
 <script src="app/balance/balance.resource.js"></script>
 <script src="app/balance/balanceRepository.factory.mock.js"></script>
+<!-- endbuild -->
+
+<!-- htmlbuild:angularCordovaStartUp -->
+<!-- endbuild -->
 
 </body>
 </html>
