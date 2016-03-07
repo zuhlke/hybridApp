@@ -9,7 +9,20 @@
 import UIKit
 
 @objc(HWPSecretGeneratorPlugin) class CDVSecretGeneratorPlugin: CDVPlugin {
+    
+    var timer = NSTimer()
+    var callbackId : String = ""
+    
+    func update(){
+        NSLog("update()")
+        
+        let pluginResult = CDVPluginResult(status: CDVCommandStatus_OK, messageAsString: "Event from swift!")
+        commandDelegate!.sendPluginResult(pluginResult, callbackId: self.callbackId)
+    }
+    
     func generateSecret(command: CDVInvokedUrlCommand) {
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "update", userInfo: nil, repeats: true)
         
         NSLog("========== generateSecret()!")
         NSLog("========== command.arguments: \(command.arguments)")
@@ -20,5 +33,9 @@ import UIKit
         let pluginResult = CDVPluginResult(status: CDVCommandStatus_OK, messageAsString: "Hello \(message)")
         
         commandDelegate!.sendPluginResult(pluginResult, callbackId:command.callbackId)
+    }
+    
+    func subscribe(command: CDVInvokedUrlCommand) {
+        callbackId = command.callbackId
     }
 }
