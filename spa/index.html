@@ -14,9 +14,16 @@
 
 <div data-ng-view></div>
 
+<!-- htmlbuild:cordova -->
+<!-- endbuild -->
+
+<!-- htmlbuild:bower -->
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
+<!-- endbuild -->
+
+<!-- htmlbuild:hybridApp -->
 <script src="app/app.module.js"></script>
 
 <script src="app/fastBalance/fastBalance.config.js"></script>
@@ -27,6 +34,7 @@
 
 <script src="app/balance/balance.resource.js"></script>
 <script src="app/balance/balanceRepository.factory.mock.js"></script>
+<!-- endbuild -->
 
 </body>
 </html>

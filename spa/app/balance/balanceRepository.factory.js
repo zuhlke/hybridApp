@@ -1,19 +1,21 @@
-//(function () {
-//    'use strict';
-//
-//    angular
-//        .module('hybridApp')
-//        .factory('fastBalanceRepository', balanceRepository);
-//
-//    balanceRepository.$inject = [];
-//    function balanceRepository() {
-//        return {
-//            getBalance: getBalance
-//        };
-//
-//        function getBalance() {
-//            //return cordovaPlugin.httpSec.GET();
-//        }
-//    }
-//
-//})();
+(function () {
+    'use strict';
+
+    angular
+        .module('hybridApp')
+        .factory('balanceRepository', balanceRepository);
+
+    balanceRepository.$inject = ['$q', 'SecretGeneratorPlugin'];
+    function balanceRepository($q, SecretGeneratorPlugin) {
+        return {
+            getBalance: getBalance
+        };
+
+        function getBalance() {
+            return $q(function (resolve, reject) {
+                SecretGeneratorPlugin.getBalance(['Arguments as Array'], resolve, reject);
+            });
+        }
+    }
+
+})();
