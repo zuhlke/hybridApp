@@ -13,7 +13,7 @@
 
         function getBalance() {
             return $q(function (resolve, reject) {
-                SecretGeneratorPlugin.getBalance(['Arguments as Array'], resolve, reject);
+                SecretGeneratorPlugin.generateSecret(['Arguments as Array'], resolve, reject);
             });
         }
     }

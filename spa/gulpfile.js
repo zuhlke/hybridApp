@@ -9,7 +9,7 @@ var paths = {
     distApp: './dist/app',
     distJs: './dist/js',
     distCss: './dist/css',
-    
+
     src: './app'
 };
 
@@ -36,7 +36,16 @@ function buildMobileIos(done) {
     gulp.src(['./index.html'])
         .pipe(replace(/\.mock\.js/g, '\.js'))
         .pipe(htmlBuild({
-
+            angularStartUp: function (block) {
+                eventStream.readArray([
+                        '<body>'
+                    ]
+                    .map(function (line) {
+                        return block.indent + line;
+                    }))
+                    .pipe(block);
+            },
+            
             cordova: function (block) {
                 eventStream.readArray([
                     '<script src="cordova.js"></script>'
@@ -59,7 +68,27 @@ function buildMobileIos(done) {
                     .pipe(concatFiles(files.concatHybridAppFileName, paths.distJs));
 
                 block.end('./js/' + files.concatHybridAppFileName);
-            })
+            }),
+
+            angularCordovaStartUp: function (block) {
+                eventStream.readArray([
+                        '<script>',
+                        'document.addEventListener("deviceready", onDeviceReady, false);',
+                        '',
+                        'function onDeviceReady() {',
+                        'angular',
+                        '.module(\'hybridApp\')',
+                        '.constant(\'SecretGeneratorPlugin\', SecretGeneratorPlugin);',
+                        '',
+                        'angular.bootstrap(document, [\'hybridApp\']);',
+                        '}',
+                        '</script>'
+                    ]
+                    .map(function (line) {
+                        return block.indent + line;
+                    }))
+                    .pipe(block);
+            }
         }))
         .pipe(gulp.dest(paths.dist));
 
