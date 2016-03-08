@@ -1,4 +1,5 @@
 <h1>Hello Cordova</h1>
-<button onclick="SecretGeneratorPlugin.generateSecret(['Daniel'], function(result) { alert(result); }, function(error) { alert(error); })">generateSecret()</button>
+<button onclick="SecretGeneratorPlugin.generateSecret(['Daniel'], function(result) { document.getElementById('secretDiv').innerHTML = result; }, function(error) { alert(error); })">generateSecret()</button>
 <button onclick="SecretGeneratorPlugin.subscribe(function(result) { console.log(result); })">subscribe</button>
+<div id="secretDiv"></div>
 <script type="text/javascript" src="cordova.js"></script>
