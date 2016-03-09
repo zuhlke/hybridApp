@@ -16,6 +16,7 @@
 		C32033DA1C86E58B00AD479B /* iOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32033D91C86E58B00AD479B /* iOSAppTests.swift */; };
 		C32033E51C86E58B00AD479B /* iOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32033E41C86E58B00AD479B /* iOSAppUITests.swift */; };
 		C32033F31C86E62200AD479B /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = C32033F21C86E62200AD479B /* config.xml */; };
+		C3811B5B1C90770800A43B6B /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = C3811B5A1C90770800A43B6B /* fastlane */; };
 		C3EB47061C889E3D00FFDFE4 /* www in Resources */ = {isa = PBXBuildFile; fileRef = C3EB47051C889E3D00FFDFE4 /* www */; };
 		C3EB470E1C88A36700FFDFE4 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EB470D1C88A27100FFDFE4 /* libCordova.a */; };
 		D87F1AD31C898E89006DE6ED /* CDVSecretGeneratorPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F1AD21C898E89006DE6ED /* CDVSecretGeneratorPlugin.swift */; };
@@ -69,6 +70,7 @@
 		C32033E61C86E58B00AD479B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C32033F21C86E62200AD479B /* config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = config.xml; sourceTree = "<group>"; };
 		C32034051C86E8CF00AD479B /* iOSApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOSApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		C3811B5A1C90770800A43B6B /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fastlane; sourceTree = "<group>"; };
 		C3EB47051C889E3D00FFDFE4 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = CordovaLib/../www; sourceTree = "<group>"; };
 		C3EB47081C88A27100FFDFE4 /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		D87F1AD21C898E89006DE6ED /* CDVSecretGeneratorPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDVSecretGeneratorPlugin.swift; path = iOSApp/Plugins/SecretGeneratorPlugin/CDVSecretGeneratorPlugin.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		C32033B61C86E58B00AD479B = {
 			isa = PBXGroup;
 			children = (
+				C3811B5A1C90770800A43B6B /* fastlane */,
 				C32033C11C86E58B00AD479B /* iOSApp */,
 				D87F1AD41C898E8F006DE6ED /* Plugins */,
 				C3EB47051C889E3D00FFDFE4 /* www */,
@@ -295,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3811B5B1C90770800A43B6B /* fastlane in Resources */,
 				C32033CF1C86E58B00AD479B /* LaunchScreen.storyboard in Resources */,
 				C32033CC1C86E58B00AD479B /* Assets.xcassets in Resources */,
 				C32033CA1C86E58B00AD479B /* Main.storyboard in Resources */,
@@ -476,6 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				HEADER_SEARCH_PATHS = (
 					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
 					"\"$(OBJROOT)/UninstalledProducts/include\"",
@@ -498,6 +503,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				HEADER_SEARCH_PATHS = (
 					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
 					"\"$(OBJROOT)/UninstalledProducts/include\"",

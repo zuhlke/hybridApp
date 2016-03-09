@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites tests='3' failures='1'>
+  <testsuite name='iOSAppTests.iOSAppTests' tests='3' failures='1'>
+    <testcase classname='iOSAppTests.iOSAppTests' name='testCDVSecretGeneratorPlugin' time='0.002'/>
+    <testcase classname='iOSAppTests.iOSAppTests' name='testFailing'>
+      <failure message='XCTAssertTrue failed - '>iOSAppTests/iOSAppTests.swift:42</failure>
+    </testcase>
+    <testcase classname='iOSAppTests.iOSAppTests' name='testPerformanceExample' time='0.264'/>
+  </testsuite>
+</testsuites>
