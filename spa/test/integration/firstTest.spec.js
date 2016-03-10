@@ -5,7 +5,8 @@ var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
 
 chai.use(chaiAsPromised);
-var expect = chai.should();
+chai.expect();
+var expect = chai.expect;
 chaiAsPromised.transferPromiseness = wd.transferPromiseness;
 
 
@@ -33,18 +34,17 @@ describe('using promises and chai-as-promised', function () {
         return driver
             .elementByName('Second').click();
     });
-    
+
     after(function () {
         return driver.quit();
     });
 
     it('should get current balance from the plugin', function () {
-        return driver
+        return expect(driver
             .elementByName('First').click()
             .elementByName('Second').click()
             .contexts()
             .then(function (contexts) { // get list of available views
-                    console.log('= 2 =');
                     console.log('Switch to context: ' + contexts[1]);
                     return driver.context(contexts[1]); // choose what is probably the webview context
                 },
@@ -56,7 +56,8 @@ describe('using promises and chai-as-promised', function () {
             .elementByCss('.currentBalanceDiv')
             .text()
             .then(function (text) {
-                console.log(text);
-            });
+                return text;
+            }))
+            .to.eventually.be.equal('Hello World!!')
     });
 });
