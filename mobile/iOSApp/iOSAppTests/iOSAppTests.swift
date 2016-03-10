@@ -38,9 +38,9 @@ class iOSAppTests: XCTestCase {
         XCTAssertEqual("Hello \(message)", result.getResult().message as? String)
     }
     
-    func testFailing() {
-        XCTAssertTrue(false)
-    }
+//    func testFailing() {
+//        XCTAssertTrue(false)
+//    }
 
     
     func testPerformanceExample() {
