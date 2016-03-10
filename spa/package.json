@@ -4,17 +4,21 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "bower": "^1.7.7",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.2.0",
     "event-stream": "^3.3.2",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-htmlbuild": "^0.4.1",
-    "gulp-replace": "^0.5.4"
+    "gulp-replace": "^0.5.4",
+    "mocha": "^2.4.5",
+    "wd": "^0.4.0"
   },
   "dependencies": {}
 }

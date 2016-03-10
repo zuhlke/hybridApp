@@ -242,7 +242,7 @@
 				TargetAttributes = {
 					C32033BE1C86E58B00AD479B = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 49B8TMA9RW;
+						DevelopmentTeam = BA68KG66J2;
 					};
 					C32033D41C86E58B00AD479B = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -485,7 +485,7 @@
 				INFOPLIST_FILE = iOSApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zuehlke.iOSApp.iOSApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuehlke.iOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSApp/iOSApp-Bridging-Header.h";
@@ -507,7 +507,7 @@
 				INFOPLIST_FILE = iOSApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zuehlke.iOSApp.iOSApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuehlke.iOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSApp/iOSApp-Bridging-Header.h";
