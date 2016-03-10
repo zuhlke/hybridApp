@@ -10,6 +10,8 @@ var paths = {
     distJs: './dist/js',
     distCss: './dist/css',
 
+    mobileWww: '../mobile/iOSApp/www',
+    
     src: './app'
 };
 
@@ -25,6 +27,13 @@ var globbing = {
 gulp.task('build-dist', ['buildMobileIos', 'copyTemplates']);
 gulp.task('buildMobileIos', buildMobileIos);
 gulp.task('copyTemplates', copyTemplates);
+gulp.task('copyDistToSpa', copyDistToSpa);
+
+function copyDistToSpa() {
+    return gulp
+        .src([paths.dist + '/**/*'])
+        .pipe(gulp.dest(paths.mobileWww));
+}
 
 function copyTemplates() {
     return gulp
