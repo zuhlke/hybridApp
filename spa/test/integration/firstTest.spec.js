@@ -35,29 +35,51 @@ describe('using promises and chai-as-promised', function () {
             .elementByName('Second').click();
     });
 
+    afterEach(function () {
+        return driver
+            .contexts()
+            .then(switchToNativeContext)
+            .elementByName('First').click();
+    });
+
     after(function () {
         return driver.quit();
     });
 
     it('should get current balance from the plugin', function () {
         return expect(driver
-            .elementByName('First').click()
-            .elementByName('Second').click()
             .contexts()
-            .then(function (contexts) { // get list of available views
-                    console.log('Switch to context: ' + contexts[1]);
-                    return driver.context(contexts[1]); // choose what is probably the webview context
-                },
-                function (error) {
-                    console.log(error);
-                })
-            .elementByCss('.balanceMenuLink')
+            .then(switchToFirstWebViewContext, function (error) {
+                console.log(error);
+            })
+            .waitForElementByCss('.balanceMenuLink')
             .click()
-            .elementByCss('.currentBalanceDiv')
+            .waitForElementByCss('.currentBalanceDiv')
             .text()
             .then(function (text) {
                 return text;
             }))
-            .to.eventually.be.equal('Hello World!!')
+            .to.eventually.be.equal('Hello World!')
     });
+
+    it('should select second tab and enter some text into text field', function () {
+        return driver
+            .elementByAccessibilityId('SecondViewTextFieldAccessibilityId')
+            .type('Hello World!')
+            .keys(wd.SPECIAL_KEYS.Enter);
+    });
+
+    function switchToFirstWebViewContext(contexts) {
+        return switchContext(contexts, 1);
+    }
+
+    function switchToNativeContext(contexts) {
+        return switchContext(contexts, 0); 
+    }
+
+    function switchContext(contexts, index) {
+        console.log('Available contexts: ' + contexts);
+        console.log('Switch to context: ' + contexts[index]);
+        return driver.context(contexts[index]); 
+    }
 });
