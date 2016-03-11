@@ -8,11 +8,15 @@
 
 import UIKit
 
-class SecondViewController: CDVViewController {
+class SecondViewController: CDVViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var secondViewTextField: UITextField!
 
     override func viewDidLoad() {
        super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        secondViewTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +33,9 @@ class SecondViewController: CDVViewController {
             self.view.bounds.height-120)
         self.view.backgroundColor = UIColor.blueColor()
     }
-
-
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        secondViewTextField.resignFirstResponder()
+        return true
+    }
 }

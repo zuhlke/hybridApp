@@ -76,7 +76,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="SecondViewButtonAccessibilityId"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cY3-97-3Zr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cY3-97-3Zr" userLabel="SecondViewTextField">
                                 <rect key="frame" x="70" y="354" width="404" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="SecondViewTextFieldAccessibilityId"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -113,6 +113,9 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="secondViewTextField" destination="cY3-97-3Zr" id="vSd-WG-h7D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

@@ -62,11 +62,11 @@ describe('using promises and chai-as-promised', function () {
             .to.eventually.be.equal('Hello World!')
     });
 
-    it('should select second tab and enter some text into text field', function () {
+    it('should enter text into native text field and hide key board when finished', function () {
         return driver
             .elementByAccessibilityId('SecondViewTextFieldAccessibilityId')
             .type('Hello World!')
-            .keys(wd.SPECIAL_KEYS.Enter);
+            .keys(wd.SPECIAL_KEYS.Return);
     });
 
     function switchToFirstWebViewContext(contexts) {
