@@ -55,18 +55,22 @@ describe('using promises and chai-as-promised', function () {
             .waitForElementByCss('.balanceMenuLink')
             .click()
             .waitForElementByCss('.currentBalanceDiv')
-            .text()
-            .then(function (text) {
+            .text(function (text) {
                 return text;
             }))
             .to.eventually.be.equal('Hello World!')
     });
 
     it('should enter text into native text field and hide key board when finished', function () {
-        return driver
+        return expect(driver
             .elementByAccessibilityId('SecondViewTextFieldAccessibilityId')
             .type('Hello World!')
-            .keys(wd.SPECIAL_KEYS.Return);
+            .keys(wd.SPECIAL_KEYS.Return)
+            .elementByAccessibilityId('SecondViewTextFieldAccessibilityId')
+            .text(function (text) {
+                return text;
+            }))
+            .to.eventually.be.equal('Hello World!');
     });
 
     function switchToFirstWebViewContext(contexts) {
