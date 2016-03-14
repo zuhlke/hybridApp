@@ -74,12 +74,13 @@ describe('using promises and chai-as-promised', function () {
     }
 
     function switchToNativeContext(contexts) {
-        return switchContext(contexts, 0); 
+        return switchContext(contexts, 0);
     }
 
     function switchContext(contexts, index) {
         console.log('Available contexts: ' + contexts);
         console.log('Switch to context: ' + contexts[index]);
-        return driver.context(contexts[index]); 
+        
+        return driver.context(contexts[index]);
     }
 });
