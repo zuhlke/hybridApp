@@ -87,4 +87,10 @@ describe('using promises and chai-as-promised', function () {
         
         return driver.context(contexts[index]);
     }
+    
+    it('should rotate device to landscape and back to portrait', function() {
+        return driver
+            .setOrientation('LANDSCAPE')
+            .setOrientation('PORTRAIT');
+    })
 });
