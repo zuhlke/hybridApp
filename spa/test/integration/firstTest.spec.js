@@ -39,6 +39,8 @@ describe('using promises and chai-as-promised', function () {
 
     beforeEach(function () {
         return driver
+        //.elementByAccessibilityId('xyz').click();
+        //    .elementById(42).click();
             .elementByName('Second').click();
     });
 
@@ -59,9 +61,9 @@ describe('using promises and chai-as-promised', function () {
             .then(switchToFirstWebViewContext, function (error) {
                 console.log(error);
             })
-            .waitForElementByCss('.balanceMenuLink')
+            .waitForElementById('balanceMenuLink')
             .click()
-            .waitForElementByCss('.currentBalanceDiv')
+            .waitForElementById('currentBalanceDiv')
             .text(function (text) {
                 return text;
             }))
@@ -70,7 +72,7 @@ describe('using promises and chai-as-promised', function () {
 
     it('should enter text into native text field and hide key board when finished', function () {
         return expect(driver
-            .elementByAccessibilityId('SecondViewTextFieldAccessibilityId')
+            .elementById('SecondViewTextFieldAccessibilityId')
             .type('Hello World!')
             .keys(wd.SPECIAL_KEYS.Return)
             .elementByAccessibilityId('SecondViewTextFieldAccessibilityId')
