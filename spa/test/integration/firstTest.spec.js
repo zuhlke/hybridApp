@@ -12,6 +12,7 @@ chaiAsPromised.transferPromiseness = wd.transferPromiseness;
 
 describe('using promises and chai-as-promised', function () {
     var driver;
+    
     var desiredCapabilities = {
         'appium-version': '1.0',
         platformName: 'iOS',
@@ -20,6 +21,12 @@ describe('using promises and chai-as-promised', function () {
         //app: '/Users/phmo/Library/Developer/Xcode/DerivedData/iOSApp-bymaymuzrtclheafckstrhidbjkr/Build/Products/Debug-iphoneos/iOSApp.app'
         //udid: 'c6b7bd9947354b61c920b7ec51e05e5d7af4e0c0'
     };
+
+    //var desiredCapabilities = {
+    //    'appium-version': '1.0',
+    //    platformName: 'Android',
+    //    deviceName: 'b083be90'
+    //};
 
     this.timeout(514229);
 
@@ -87,10 +94,18 @@ describe('using promises and chai-as-promised', function () {
         
         return driver.context(contexts[index]);
     }
-    
-    it('should rotate device to landscape and back to portrait', function() {
+
+    it('should rotate device to landscape and back to portrait', function () {
         return driver
             .setOrientation('LANDSCAPE')
             .setOrientation('PORTRAIT');
-    })
+    });
+
+    //it('should click on native Android buttons', function () {
+    //    return driver
+    //        .waitForElementByAccessibilityId('RightButtonAccessibilityId')
+    //        .click()
+    //        .waitForElementByAccessibilityId('LeftButtonAccessibilityId')
+    //        ;
+    //});
 });
