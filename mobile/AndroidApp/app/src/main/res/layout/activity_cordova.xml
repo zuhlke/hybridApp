@@ -38,6 +38,7 @@
             android:layout_weight="1"
             android:text="Left"
             android:visibility="visible"
+            android:contentDescription="LeftButtonAccessibilityId"
             />
 
         <Button
