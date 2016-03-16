@@ -11,7 +11,7 @@ chaiAsPromised.transferPromiseness = wd.transferPromiseness;
 
 var testConfigurationForIos = {
     name: 'iOS',
-    port: 4722,
+    port: 4723,
     desiredCapabilities: {
         'appium-version': '1.0',
         platformName: 'iOS',
@@ -31,8 +31,8 @@ var testConfigurationForAndroid = {
         app: '/Users/phmo/_Zuhlke/Source/git/hybridApp/mobile/AndroidApp/app/build/outputs/apk/app-debug.apk'
     }
 };
-var testConfigurations = [testConfigurationForIos];
-//var testConfigurations = [testConfigurationForIos, testConfigurationForAndroid];
+//var testConfigurations = [testConfigurationForIos];
+var testConfigurations = [testConfigurationForIos, testConfigurationForAndroid];
 
 testConfigurations.forEach(function (testConfigurations) {
     describe('[' + testConfigurations.name + '] Basic tests for finding & clicking elements and typing text & rotate device', function () {
