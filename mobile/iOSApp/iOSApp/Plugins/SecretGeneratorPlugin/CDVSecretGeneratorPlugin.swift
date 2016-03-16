@@ -32,6 +32,8 @@ import UIKit
         let message = command.arguments[0]
         let pluginResult = CDVPluginResult(status: CDVCommandStatus_OK, messageAsString: "Hello \(message)")
         
+        // pluginResult.setKeepCallbackAsBool(true) -> Don't destroy callback
+        
         commandDelegate!.sendPluginResult(pluginResult, callbackId:command.callbackId)
     }
     
