@@ -21,7 +21,6 @@ describe('multi', function () {
     testConfigurations.push({
         port: 4721,
         desiredCapabilities: {
-            //'appium-version': '1.0',
             platformName: 'iOS',
 
             deviceName: 'Philippe\'s iPhone', // (9.2.1) [c6b7bd9947354b61c920b7ec51e05e5d7af4e0c0]',
@@ -32,19 +31,18 @@ describe('multi', function () {
         }
     });
 
-    //testConfigurations.push({
-    //    port: 4722,
-    //    desiredCapabilities: {
-    //        //'appium-version': '1.0',
-    //        platformName: 'iOS',
-    //
-    //        deviceName: 'Daniel Gartmann\'s iPhone',
-    //        udid: 'a7071a33350c54f2d32154e4ec890f6829b2f0f7',
-    //
-    //        app: '/Users/phmo/Library/Developer/Xcode/DerivedData/iOSApp-bymaymuzrtclheafckstrhidbjkr/Build/Products/Debug-iphoneos/iOSApp.app',
-    //        fullReset: true
-    //    }
-    //});
+    testConfigurations.push({
+        port: 4722,
+        desiredCapabilities: {
+            platformName: 'iOS',
+    
+            deviceName: 'Daniel Gartmann\'s iPhone',
+            udid: 'a7071a33350c54f2d32154e4ec890f6829b2f0f7',
+    
+            app: '/Users/phmo/Library/Developer/Xcode/DerivedData/iOSApp-bymaymuzrtclheafckstrhidbjkr/Build/Products/Debug-iphoneos/iOSApp.app',
+            fullReset: true
+        }
+    });
 
     testConfigurations.push({
         port: 4723,
@@ -83,12 +81,17 @@ describe('multi', function () {
         var promises = _.map(drivers, function (driver) {
             return expect(driver
                 .waitForElementByAccessibilityId('MainTextAccessibilityId')
+                .click()
                 .type('Hello from tests!')
-                .elementByAccessibilityId('MainTextAccessibilityId')
+                .waitForElementByAccessibilityId('MainTextAccessibilityId')
                 .text(function (text) {
                     return text;
                 }))
-                .to.eventually.be.equal('Hello from tests!', driver.testConfiguration.desiredCapabilities.platformName)
+                .to.eventually.be.equal('Hello from tests!')
+                .catch(function(error) {
+                    console.log(['[', driver.testConfiguration.desiredCapabilities.deviceName, ']'].join(''));
+                    throw error;
+                });
         });
 
         return Promise.all(promises);
