@@ -14,8 +14,6 @@ describe('multi', function () {
 
     var drivers = [];
     var testConfigurations = [];
-    var iOsDriver;
-    var androidDriver;
     this.timeout(514229);
 
     testConfigurations.push({
@@ -23,7 +21,7 @@ describe('multi', function () {
         desiredCapabilities: {
             platformName: 'iOS',
 
-            deviceName: 'Philippe\'s iPhone', // (9.2.1) [c6b7bd9947354b61c920b7ec51e05e5d7af4e0c0]',
+            deviceName: 'Philippe\'s iPhone',
             udid: 'c6b7bd9947354b61c920b7ec51e05e5d7af4e0c0',
 
             app: '/Users/phmo/Library/Developer/Xcode/DerivedData/iOSApp-bymaymuzrtclheafckstrhidbjkr/Build/Products/Debug-iphoneos/iOSApp.app',
@@ -35,10 +33,10 @@ describe('multi', function () {
         port: 4722,
         desiredCapabilities: {
             platformName: 'iOS',
-    
+
             deviceName: 'Daniel Gartmann\'s iPhone',
             udid: 'a7071a33350c54f2d32154e4ec890f6829b2f0f7',
-    
+
             app: '/Users/phmo/Library/Developer/Xcode/DerivedData/iOSApp-bymaymuzrtclheafckstrhidbjkr/Build/Products/Debug-iphoneos/iOSApp.app',
             fullReset: true
         }
@@ -65,7 +63,7 @@ describe('multi', function () {
         var promises = _.map(drivers, function (driver) {
             return driver.init(driver.testConfiguration.desiredCapabilities);
         });
-        
+
         return Promise.all(promises);
     });
 
@@ -73,7 +71,7 @@ describe('multi', function () {
         var promises = _.map(drivers, function (driver) {
             return driver.quit();
         });
-        
+
         return Promise.all(promises);
     });
 
@@ -88,7 +86,7 @@ describe('multi', function () {
                     return text;
                 }))
                 .to.eventually.be.equal('Hello from tests!')
-                .catch(function(error) {
+                .catch(function (error) {
                     console.log(['[', driver.testConfiguration.desiredCapabilities.deviceName, ']'].join(''));
                     throw error;
                 });
