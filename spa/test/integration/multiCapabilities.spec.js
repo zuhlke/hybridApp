@@ -1,9 +1,9 @@
 'use strict';
 
+var _ = require('lodash');
 var wd = require('wd');
 var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
-var q = require('q');
 
 chai.use(chaiAsPromised);
 chai.expect();
@@ -13,12 +13,12 @@ chaiAsPromised.transferPromiseness = wd.transferPromiseness;
 describe('multi', function () {
 
     var drivers = [];
+    var testConfigurations = [];
     var iOsDriver;
     var androidDriver;
     this.timeout(514229);
 
-    var testConfigurationForIosPhilippe = {
-        name: 'iOS',
+    testConfigurations.push({
         port: 4721,
         desiredCapabilities: {
             //'appium-version': '1.0',
@@ -30,25 +30,23 @@ describe('multi', function () {
             app: '/Users/phmo/Library/Developer/Xcode/DerivedData/iOSApp-bymaymuzrtclheafckstrhidbjkr/Build/Products/Debug-iphoneos/iOSApp.app',
             fullReset: true
         }
-    };
+    });
 
-    var testConfigurationForIosDaniel = {
-        name: 'iOS',
-        port: 4722,
-        desiredCapabilities: {
-            //'appium-version': '1.0',
-            platformName: 'iOS',
+    //testConfigurations.push({
+    //    port: 4722,
+    //    desiredCapabilities: {
+    //        //'appium-version': '1.0',
+    //        platformName: 'iOS',
+    //
+    //        deviceName: 'Daniel Gartmann\'s iPhone',
+    //        udid: 'a7071a33350c54f2d32154e4ec890f6829b2f0f7',
+    //
+    //        app: '/Users/phmo/Library/Developer/Xcode/DerivedData/iOSApp-bymaymuzrtclheafckstrhidbjkr/Build/Products/Debug-iphoneos/iOSApp.app',
+    //        fullReset: true
+    //    }
+    //});
 
-            deviceName: 'Daniel Gartmann\'s iPhone',
-            udid: 'a7071a33350c54f2d32154e4ec890f6829b2f0f7',
-
-            app: '/Users/phmo/Library/Developer/Xcode/DerivedData/iOSApp-bymaymuzrtclheafckstrhidbjkr/Build/Products/Debug-iphoneos/iOSApp.app',
-            fullReset: true
-        }
-    };
-
-    var testConfigurationForAndroid = {
-        name: 'Android',
+    testConfigurations.push({
         port: 4723,
         desiredCapabilities: {
             'appium-version': '1.0',
@@ -56,67 +54,43 @@ describe('multi', function () {
             deviceName: 'b083be90',
             app: '/Users/phmo/_Zuhlke/Source/git/hybridApp/mobile/AndroidApp/app/build/outputs/apk/app-debug.apk'
         }
-    };
+    });
 
     before(function () {
-        drivers.push(wd.promiseChainRemote('0.0.0.0', testConfigurationForIosPhilippe.port));
-        drivers.push(wd.promiseChainRemote('0.0.0.0', testConfigurationForIosDaniel.port));
-        drivers.push(wd.promiseChainRemote('0.0.0.0', testConfigurationForAndroid.port));
+        drivers = _.map(testConfigurations, function (testConfiguration) {
+            var driver = wd.promiseChainRemote('0.0.0.0', testConfiguration.port);
+            driver.testConfiguration = testConfiguration;
 
-        return q.all([
-            drivers[0]
-                .init(testConfigurationForIosPhilippe.desiredCapabilities),
-            drivers[1]
-                .init(testConfigurationForIosDaniel.desiredCapabilities),
-            drivers[2]
-                .init(testConfigurationForAndroid.desiredCapabilities)
-        ]);
+            return driver;
+        });
 
-        //return iOsDriver
-        //    .init(testConfigurationForIos.desiredCapabilities);
+        var promises = _.map(drivers, function (driver) {
+            return driver.init(driver.testConfiguration.desiredCapabilities);
+        });
+        
+        return Promise.all(promises);
     });
 
     after(function () {
-        return q.all([
-            drivers[0].quit(),
-            drivers[1].quit(),
-            drivers[2].quit()
-        ]);
+        var promises = _.map(drivers, function (driver) {
+            return driver.quit();
+        });
+        
+        return Promise.all(promises);
     });
 
-    it('should rotate device to landscape and back to portrait', function () {
-        var promise0 = drivers[0]
-            .elementByName('Second')
-            .click()
-            .elementByName('First')
-            .click()
-            .elementByName('Second')
-            .click()
-            .elementByName('First')
-            .click();
-        var promise1 = drivers[1]
-            .elementByName('Second')
-            .click()
-            .elementByName('First')
-            .click()
-            .elementByName('Second')
-            .click()
-            .elementByName('First')
-            .click();
-        var promise2 = drivers[2]
-            .waitForElementByAccessibilityId('RightButtonAccessibilityId')
-            .click()
-            .waitForElementByAccessibilityId('LeftButtonAccessibilityId')
-            .click()
-            .waitForElementByAccessibilityId('RightButtonAccessibilityId')
-            .click()
-            .waitForElementByAccessibilityId('LeftButtonAccessibilityId')
-            .click();
+    it('should enter text', function () {
+        var promises = _.map(drivers, function (driver) {
+            return expect(driver
+                .waitForElementByAccessibilityId('MainTextAccessibilityId')
+                .type('Hello from tests!')
+                .elementByAccessibilityId('MainTextAccessibilityId')
+                .text(function (text) {
+                    return text;
+                }))
+                .to.eventually.be.equal('Hello from tests!', driver.testConfiguration.desiredCapabilities.platformName)
+        });
 
-        return q.all([
-            promise0, 
-            promise1,
-            promise2
-        ]);
+        return Promise.all(promises);
     });
 });
