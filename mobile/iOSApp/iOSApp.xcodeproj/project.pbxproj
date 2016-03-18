@@ -19,6 +19,7 @@
 		C3811B5B1C90770800A43B6B /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = C3811B5A1C90770800A43B6B /* fastlane */; };
 		C3EB47061C889E3D00FFDFE4 /* www in Resources */ = {isa = PBXBuildFile; fileRef = C3EB47051C889E3D00FFDFE4 /* www */; };
 		C3EB470E1C88A36700FFDFE4 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EB470D1C88A27100FFDFE4 /* libCordova.a */; };
+		D829E7C01C98346000440739 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D829E7BF1C98346000440739 /* TabBarViewController.swift */; };
 		D87F1AD31C898E89006DE6ED /* CDVSecretGeneratorPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F1AD21C898E89006DE6ED /* CDVSecretGeneratorPlugin.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		C3811B5A1C90770800A43B6B /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fastlane; sourceTree = "<group>"; };
 		C3EB47051C889E3D00FFDFE4 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = CordovaLib/../www; sourceTree = "<group>"; };
 		C3EB47081C88A27100FFDFE4 /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
+		D829E7BF1C98346000440739 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		D87F1AD21C898E89006DE6ED /* CDVSecretGeneratorPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDVSecretGeneratorPlugin.swift; path = iOSApp/Plugins/SecretGeneratorPlugin/CDVSecretGeneratorPlugin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 				C32033CB1C86E58B00AD479B /* Assets.xcassets */,
 				C32033CD1C86E58B00AD479B /* LaunchScreen.storyboard */,
 				C32033D01C86E58B00AD479B /* Info.plist */,
+				D829E7BF1C98346000440739 /* TabBarViewController.swift */,
 			);
 			path = iOSApp;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				C32033C71C86E58B00AD479B /* SecondViewController.swift in Sources */,
 				C32033C31C86E58B00AD479B /* AppDelegate.swift in Sources */,
 				D87F1AD31C898E89006DE6ED /* CDVSecretGeneratorPlugin.swift in Sources */,
+				D829E7C01C98346000440739 /* TabBarViewController.swift in Sources */,
 				C32033C51C86E58B00AD479B /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

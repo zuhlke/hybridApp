@@ -54,6 +54,9 @@
                             <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="aaa"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="mainTextField" destination="2rQ-1M-4xa" id="TLM-rQ-sHS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
